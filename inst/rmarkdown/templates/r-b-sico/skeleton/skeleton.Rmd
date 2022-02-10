@@ -1,18 +1,110 @@
 ---
-title: "Template Title"
-author: "Your Name"
-date: "The Date"
-output: output_format
+title: "R básico"
+author: "Tu nombre"
+date: `r Sys.Date()`
+output: html_document
+theme: journal
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Adding an RMarkdown Template
+Toma en cuenta que esta sección está fuertemente inspirada en el contenido del capítulo 2 del libro [Hands-On Programming with R](https://rstudio-education.github.io/hopr/basics.html).
 
-This file is what a user will see when they select your template. Make sure that you update the fields in the yaml header. In particular you will want to update the `output` field to whatever format your template requires.
+## Usar R como calculadora
 
-This is a good place to demonstrate special features that your template provides. Ideally it should knit out-of-the-box, or at least contain clear instructions as to what needs changing.
+### Ejercicio 1
 
-Finally, be sure to remove this message!
+Crea un bloque de código en el que realizarás operaciones aritméticas (suma, resta, división, multiplicación). Toma como referencia un ejemplo para obtener una manera larga de calcular el doble de un número. Para ello, haz una operación que represente el siguiente cálculo:
+
+1.  Elige un número cualquiera
+2.  Súmale 2
+3.  Multiplica el resultado por 3
+4.  Réstale 6 al resultado
+5.  Divide el resultado entre 3
+
+### Ejercicio 2
+
+Repite el ejercicio anterior, pero previamente asígnale un nombre al número escogido.
+
+## Vectores
+
+### Ejercicio 3
+
+Crea un objeto llamado `dado` que contenga una secuencia del 1 al 6
+
+### Ejercicio 4
+
+Realiza operaciones aritméticas en `dado`
+
+### Ejercicio 5
+
+Realiza operaciones aritméticas en dos vectores de números de tal manera que obtengas el mismo contenido que el vector `mis_resultados`.
+
+```{r}
+mis_resultados <- c(1.05, 0.55, 1.15, 0.6, 1.25, 5.65)
+```
+
+## Funciones
+
+### Ejercicio 5
+
+Redondea `mis_resultados`
+
+### Ejercicio 6
+
+Obtén el promedio, mediana y suma de `mis_resultados`
+
+### Ejercicio 7
+
+Responde a las siguientes preguntas usando el código apropiado:
+
+1.  ¿Qué valor representa mejor el contenido de `mis_resultados`? ¿El promedio o la mediana? ¿Por qué?
+2.  ¿Qué tan lejos está cada elemento de `mis_resultados` de su promedio?
+3.  ¿Cómo podríamos saber qué tan lejos en general están los elementos de `mis_resultados` de su promedio?
+
+## Argumentos
+
+### Ejercicio 8
+
+1.  Simula el lanzamiento de un dado usando la función `sample()`
+2.  Simula el lanzamiento de seis dados usando la función `sample()`
+
+### Ejercicio 9
+
+Redondea `mis_resultados` a un decimal
+
+## Escribir funciones
+
+### Ejercicio 10
+
+1.  Escribe una función para simular el lanzamiento de un dado de seis caras
+2.  Escribe una función para simular el lanzamiento de un dado de 8 caras
+3.  Escribe una función para simular el lanzamiento de dos dados de seis caras
+4.  Escribe una función para simular una lotería. Toma como ejemplo la versión clásica de la TINKA, en la que debes acertar seis (6) números de un total de (45).
+
+### Ejercicio 11
+
+A modo de preparación, cargamos paquetes necesarios para el siguiente ejercicio.
+
+```{r, warning=FALSE, message=FALSE}
+library(gapminder)
+library(ggplot2)
+library(dplyr)
+```
+
+El siguiente bloque de código permite obtener un gráfico de la evolución de la expectativa de vida de los países de la alianza del pacífico.
+
+```{r}
+gapminder %>% 
+    filter(country %in% c("Peru", "Chile", "Colombia", "Mexico")) %>% 
+    ggplot(aes(year, gdpPercap, color = country)) +
+    geom_line()
+```
+
+Adáptalo para permitir una comparación entre Estados Unidos (United States) y Canadá (Canada).
+
+### Ejercicio 12
+
+Crea una función para permitir la comparación de la evolución del PBI per cápita entre dos países cualquiera. La función debe llamarse `graficar_PIB_per_capita()` .
