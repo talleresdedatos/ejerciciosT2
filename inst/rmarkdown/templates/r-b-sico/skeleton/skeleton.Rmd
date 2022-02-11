@@ -113,4 +113,8 @@ Adáptalo para permitir una comparación entre Estados Unidos (United States) y 
 
 ### Ejercicio 12
 
+Recrea con código el Gráfico 1 del siguiente enlace: <https://rpubs.com/talleresdedatos/graficos_base>
+
+### Ejercicio 13
+
 Crea una función para permitir la comparación de la evolución del PBI per cápita entre dos países cualquiera. La función debe llamarse `graficar_PIB_per_capita()` y tener un argumento para cada país.
