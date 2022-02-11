@@ -16,12 +16,12 @@ Toma en cuenta que esta sección está fuertemente inspirada en el contenido del
 
 ### Ejercicio 1
 
-Crea un bloque de código en el que realizarás operaciones aritméticas (suma, resta, división, multiplicación). Toma como referencia un ejemplo para obtener una manera larga de calcular el doble de un número. Para ello, haz una operación que represente el siguiente cálculo:
+Inserta un bloque de código en el que realizarás operaciones aritméticas (suma, resta, división, multiplicación). Toma como referencia un ejemplo para obtener una manera larga de calcular el doble de un número. Para ello, haz una operación que represente el siguiente cálculo:
 
 1.  Elige un número cualquiera
 2.  Súmale 2
-3.  Multiplica el resultado por 3
-4.  Réstale 6 al resultado
+3.  Multiplica el resultado por 6
+4.  Réstale 12 al resultado
 5.  Divide el resultado entre 3
 
 ### Ejercicio 2
@@ -54,19 +54,25 @@ Redondea `mis_resultados`
 
 ### Ejercicio 6
 
-Obtén el promedio, mediana y suma de `mis_resultados`
+Obtén el promedio, mediana y suma de `mis_resultados` . Puedes obtener el promedio usando la función `mean()`, la mediana usando la función `median()` y la suma usando la función `sum()`.
 
 ### Ejercicio 7
 
 Responde a las siguientes preguntas usando el código apropiado:
 
-1.  ¿Qué valor representa mejor el contenido de `mis_resultados`? ¿El promedio o la mediana? ¿Por qué?
-2.  ¿Qué tan lejos está cada elemento de `mis_resultados` de su promedio?
-3.  ¿Cómo podríamos saber qué tan lejos en general están los elementos de `mis_resultados` de su promedio?
+1.  ¿Qué valor representa mejor el contenido de `mis_resultados`? ¿El promedio o la mediana? ¿Por qué? (Para responder esto no necesitas código)
+
+    -   Respuesta:
+
+2.  ¿Qué tan lejos está **cada elemento** de `mis_resultados` de su promedio?
+
+3.  ¿Cómo podríamos saber qué tan lejos en general están **todos** los elementos de `mis_resultados` de su promedio?
 
 ## Argumentos
 
 ### Ejercicio 8
+
+Revisa la página de ayuda de la función `sample()` y resuelve con código:
 
 1.  Simula el lanzamiento de un dado usando la función `sample()`
 2.  Simula el lanzamiento de seis dados usando la función `sample()`
@@ -107,4 +113,4 @@ Adáptalo para permitir una comparación entre Estados Unidos (United States) y 
 
 ### Ejercicio 12
 
-Crea una función para permitir la comparación de la evolución del PBI per cápita entre dos países cualquiera. La función debe llamarse `graficar_PIB_per_capita()` .
+Crea una función para permitir la comparación de la evolución del PBI per cápita entre dos países cualquiera. La función debe llamarse `graficar_PIB_per_capita()` y tener un argumento para cada país.
