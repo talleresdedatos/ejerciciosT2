@@ -1,0 +1,230 @@
+---
+title: "Mi reporte de países"
+author: "Tu nombre"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Presentación
+
+En este reporte vamos a analizar datos de la evolución del PBI per cápita, expectativa de vida y población de determinados países. Para este análisis se usarán los paquetes `gapminder` y `tidyverse`.
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(gapminder)
+```
+
+# Conjunto de datos a utilizar
+
+El conjunto de datos `gapminder` cuenta con información de 142 países. Para este análisis, nos centraremos en ver cuatro de ellos:
+
+```{r}
+pais_1 <- "Peru"
+pais_2 <- "Chile"
+pais_3 <- "Colombia"
+pais_4 <- "Mexico"
+```
+
+- País 1: `r pais_1`
+- País 2: `r pais_2`
+- País 3: `r pais_3`
+- País 4: `r pais_4`
+
+```{r}
+data_paises <- gapminder %>% 
+    filter(country %in% c(pais_1, pais_2, pais_3, pais_4))
+```
+
+```{r}
+data_pais_1 <- gapminder %>% filter(country == pais_1)
+data_pais_2 <- gapminder %>% filter(country == pais_2)
+data_pais_3 <- gapminder %>% filter(country == pais_3)
+data_pais_4 <- gapminder %>% filter(country == pais_4)
+```
+
+# Metodología
+
+Se realizará una comparación de las tres variables mencionadas en la presentación haciendo uso de gráficos.
+
+# Resultados
+
+A continuación se mostrará la comparación de cada variable de manera independiente. Cada variable se presentará para cada país.
+
+## Población
+
+### País 1
+
+La población del país 1 cambió de la siguiente manera:
+
+```{r}
+graficar_poblacion <- function(pais) {
+    ggplot(pais, aes(year, pop)) +
+    geom_line(color = "red") +
+    theme_minimal() 
+}
+```
+
+```{r}
+graficar_poblacion(data_pais_1)
+```
+
+### País 2
+
+La población del país 2 cambió de la siguiente manera:
+
+```{r}
+graficar_poblacion(data_pais_2)
+```
+
+### País 3
+
+La población del país 3 cambió de la siguiente manera:
+
+```{r}
+graficar_poblacion(data_pais_3)
+```
+
+### País 4
+
+La población del país 4 cambió de la siguiente manera:
+
+```{r}
+graficar_poblacion(data_pais_4)
+```
+
+### Comparación conjunta
+
+Si vemos a los cuatro países al mismo tiempo, obtenemos lo siguiente:
+
+```{r}
+graficar_poblacion_comparado <- function(pais) {
+    ggplot(pais, aes(year, pop, color = country)) +
+    geom_line() +
+    theme_light()
+}
+```
+
+```{r}
+graficar_poblacion_comparado(data_paises)
+```
+
+## Expectativa de vida
+
+### País 1
+
+La expectativa de vida del país 1 cambió de la siguiente manera
+
+```{r}
+graficar_expectativa <- function(pais) {
+    ggplot(pais, aes(year, lifeExp)) +
+    geom_line(color = "red") +
+    theme_minimal() 
+}
+```
+
+```{r}
+graficar_expectativa(data_pais_1)
+```
+
+### País 2
+
+La expectativa de vida del país 2 cambió de la siguiente manera
+
+```{r}
+graficar_expectativa(data_pais_2)
+```
+
+### País 3
+
+La expectativa de vida del país 3 cambió de la siguiente manera
+
+```{r}
+graficar_expectativa(data_pais_3)
+```
+
+### País 4
+
+La expectativa de vida del país 4 cambió de la siguiente manera
+
+```{r}
+graficar_expectativa(data_pais_4)
+```
+
+### Comparación conjunta
+
+Si vemos los cuatro países simultáneamente obtenemos lo siguiente:
+
+```{r}
+graficar_expectativa_comparado <- function(pais) {
+    ggplot(pais, aes(year, lifeExp, color = country)) +
+    geom_line() +
+    theme_light()
+}
+```
+
+```{r}
+graficar_expectativa_comparado(data_paises)
+```
+
+## Pbi per cápita
+
+### País 1
+
+El PBI del país 1 cambió de la siguiente manera:
+
+```{r}
+graficar_gdp <- function(pais) {
+    ggplot(pais, aes(year, gdpPercap)) +
+    geom_line(color = "red") +
+    theme_minimal() 
+}
+```
+
+```{r}
+graficar_gdp(data_pais_1)
+```
+
+### País 2
+
+El PBI del país 2 cambió de la siguiente manera:
+
+```{r}
+graficar_gdp(data_pais_2)
+```
+
+### País 3
+
+El PBI del país 3 cambió de la siguiente manera:
+
+```{r}
+graficar_gdp(data_pais_3)
+```
+
+### País 4
+
+El PBI del país 4 cambió de la siguiente manera:
+
+```{r}
+graficar_gdp(data_pais_4)
+```
+
+### Comparación conjunta
+
+Si vemos los cuatro países simultáneamente obtenemos lo siguiente:
+
+```{r}
+graficar_gdp_comparado <- function(pais) {
+    ggplot(pais, aes(year, gdpPercap, color = country)) +
+    geom_line() +
+    theme_light()
+}
+```
+
+```{r}
+graficar_gdp_comparado(data_paises)
+```
+
