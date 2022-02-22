@@ -3,10 +3,11 @@ Title: Ejercicios del T2 de talleresdedatos
 Version: 0.0.0.9000
 Authors@R: 
     person("Samuel", "Calderon", , "samuel.calderon@uarm.pe", role = c("aut", "cre"))
-Description:Pprovee un conjunto de ejercicios que sirvan para complementar las actividades desarrolladas en el Taller II de Elaboración de Productos de datos: Automatización.
+Description: Provee un conjunto de ejercicios que sirvan para complementar las actividades desarrolladas en el Taller II de Elaboración de Productos de datos: Automatización.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports: 
-    gapminder
+    gapminder,
+    shiny
