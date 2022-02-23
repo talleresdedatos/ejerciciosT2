@@ -27,6 +27,8 @@ Se usará el conjunto de datos `gapminder` del paquete `gapminder`. Contiene inf
 
 Se presentará la información para dos continentes. En primer lugar, se presentará un gráfico de evolución de la variable para cada continente. Posteriormente, se presentará un gráfico de comparación que incluya a ambos continentes.
 
+## Generación de gráfico individual
+
 ```{r}
 tabla_promedio_individual <- gapminder %>% 
     filter(continent == "Americas") %>% 
@@ -35,9 +37,16 @@ tabla_promedio_individual <- gapminder %>%
 ```
 
 ```{r}
-grafico_individual <- ggplot(tabla_promedio, aes(year, promedio)) +
+grafico_individual <- ggplot(tabla_promedio_individual, aes(year, promedio)) +
     geom_line()
 ```
+
+```{r}
+grafico_individual
+```
+
+
+## Generación de gráfico comparado
 
 ```{r}
 tabla_promedio_comparado <- gapminder %>% 
@@ -47,9 +56,14 @@ tabla_promedio_comparado <- gapminder %>%
 ```
 
 ```{r}
-ggplot(tabla_promedio_comparado, aes(year, promedio, color = continent)) +
+grafico_comparado <- ggplot(tabla_promedio_comparado, aes(year, promedio, color = continent)) +
     geom_line()
 ```
+
+```{r}
+grafico_comparado
+```
+
 
 
 
