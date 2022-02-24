@@ -1,0 +1,4 @@
+name: "T2-04 Repaso documento parametrizado"
+description: >
+   Contiene una plantilla para generar un documento parametrizado
+create_dir: FALSE

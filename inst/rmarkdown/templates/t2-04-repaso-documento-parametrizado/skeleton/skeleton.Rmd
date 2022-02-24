@@ -1,0 +1,206 @@
+---
+title: "Reporte de continentes"
+author: "Tu nombre"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Presentación
+
+El presente reporte busca comparar la evolución de la población, expectativa de vida y PBI per cápita en los cinco continentes desde 1952 hasta 2007.
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(gapminder)
+```
+
+
+# Conjunto de datos a utilizar
+
+Se usará el conjunto de datos `gapminder` del paquete `gapminder`. Contiene información de 142 países 
+
+# Metodología
+
+Se presentará la información para dos continentes. En primer lugar, se presentará un gráfico de evolución de la variable para cada continente. Posteriormente, se presentará un gráfico de comparación que incluya a ambos continentes.
+
+## Obtención de gráfico de continente individual
+
+```{r}
+graficar_expectativa <- function(mi_continente) {
+    # filtrado de tabla
+    tabla_promedio_individual <- gapminder %>%
+        filter(continent == mi_continente) %>%
+        group_by(year) %>%
+        summarise(promedio = mean(lifeExp))
+    
+    # creación de gráfico
+    grafico_individual <- ggplot(tabla_promedio_individual, aes(year, promedio)) +
+        geom_line()
+    
+    grafico_individual # retorno de contenido
+}
+```
+
+```{r}
+graficar_poblacion <- function(mi_continente) {
+    # filtrado de tabla
+    tabla_promedio_individual <- gapminder %>%
+        filter(continent == mi_continente) %>%
+        group_by(year) %>%
+        summarise(promedio = mean(pop))
+    
+    # creación de gráfico
+    grafico_individual <- ggplot(tabla_promedio_individual, aes(year, promedio)) +
+        geom_line()
+    
+    grafico_individual # retorno de contenido
+}
+```
+
+```{r}
+graficar_PBI <- function(mi_continente) {
+    # filtrado de tabla
+    tabla_promedio_individual <- gapminder %>%
+        filter(continent == mi_continente) %>%
+        group_by(year) %>%
+        summarise(promedio = mean(gdpPercap))
+    
+    # creación de gráfico
+    grafico_individual <- ggplot(tabla_promedio_individual, aes(year, promedio)) +
+        geom_line()
+    
+    grafico_individual # retorno de contenido
+}
+```
+
+## Obtención de gráfico de comparación
+
+```{r}
+graficar_expectativa_comparado <- function(continente_1, continente_2) {
+    # generación de tabla
+    tabla_promedio_comparado <- gapminder %>%
+        filter(continent %in% c(continente_1, continente_2)) %>%
+        group_by(year, continent) %>%
+        summarise(promedio = mean(lifeExp))
+    
+    # generación de gráfico
+    grafico_comparado <-
+        ggplot(tabla_promedio_comparado,
+               aes(year, promedio, color = continent)) +
+        geom_line()
+    
+    grafico_comparado # retorno de contenido
+}
+```
+
+```{r}
+graficar_poblacion_comparado <- function(continente_1, continente_2) {
+    # generación de tabla
+    tabla_promedio_comparado <- gapminder %>%
+        filter(continent %in% c(continente_1, continente_2)) %>%
+        group_by(year, continent) %>%
+        summarise(promedio = mean(pop))
+    
+    # generación de gráfico
+    grafico_comparado <-
+        ggplot(tabla_promedio_comparado,
+               aes(year, promedio, color = continent)) +
+        geom_line()
+    
+    grafico_comparado # retorno de contenido
+}
+```
+
+```{r}
+graficar_PBI_comparado <- function(continente_1, continente_2) {
+    # generación de tabla
+    tabla_promedio_comparado <- gapminder %>%
+        filter(continent %in% c(continente_1, continente_2)) %>%
+        group_by(year, continent) %>%
+        summarise(promedio = mean(gdpPercap))
+    
+    # generación de gráfico
+    grafico_comparado <-
+        ggplot(tabla_promedio_comparado,
+               aes(year, promedio, color = continent)) +
+        geom_line()
+    
+    grafico_comparado # retorno de contenido
+}
+```
+
+# Resultados
+
+## Expectativa de vida
+
+### Continente 1
+
+```{r}
+# Completar para continente 1
+graficar_expectativa(mi_continente = "Americas")
+```
+
+
+### Continente 2
+
+```{r}
+# Completar para continente 2
+graficar_expectativa(mi_continente = "Europe")
+```
+
+### Comparación
+
+```{r}
+graficar_expectativa_comparado(continente_1 = "Americas", continente_2 = "Europe")
+```
+
+
+## Población
+
+### Continente 1
+
+```{r}
+graficar_poblacion(mi_continente = "Americas")
+```
+
+
+### Continente 2
+
+```{r}
+graficar_poblacion(mi_continente = "Europe")
+```
+
+
+### Comparación
+
+```{r}
+graficar_poblacion_comparado(continente_1 = "Americas", continente_2 = "Europe")
+```
+
+
+## PBI per cápita
+
+### Continente 1
+
+```{r}
+graficar_PBI(mi_continente = "Americas")
+```
+
+
+### Continente 2
+
+```{r}
+graficar_PBI(mi_continente = "Europe")
+```
+
+
+### Comparación
+
+```{r}
+graficar_PBI_comparado(continente_1 = "Americas", continente_2 = "Europe")
+```
+
