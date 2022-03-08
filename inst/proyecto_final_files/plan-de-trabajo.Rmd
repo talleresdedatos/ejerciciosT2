@@ -1,0 +1,35 @@
+---
+title: "Plan de trabajo"
+output: html_document
+---
+
+*Adaptado del trabajo de Jennifer Ponce*
+
+# Tema 
+
+- Elecciones sub-nacionales y género
+
+# Posible pregunta central
+
+- ¿Cómo ha sido la evolución de los resultados electorales de las candidatas mujeres en el Perú en las últimas cinco elecciones sub-nacionales? (2002-2006-2010-2014-2018)
+
+# Posibles preguntas secundarias
+
+- ¿Cómo ha sido la evolución de los resultados electorales de las candidatas mujeres a alcaldías distritales en el Perú en las últimas cinco elecciones sub-nacionales?
+- ¿Cómo ha sido la evolución de los resultados electorales de las candidatas mujeres a alcaldías provinciales en el Perú en las últimas cinco elecciones sub-nacionales?
+- ¿Cómo ha sido la evolución de los resultados electorales de las candidatas mujeres a gobiernos regionales en el Perú en las últimas cinco elecciones sub-nacionales?
+- ¿Cómo ha sido la evolución de la participación de candidatas mujeres a gobiernos regionales en el Perú en las últimas cinco elecciones sub-nacionales?
+
+# Conjunto de datos
+
+1. Candidatos a elecciones sub-nacionales 2002, 2006, 2010, 2014 y 2018 (Fuente: Infogob - JNE)
+2. Autoridades electas sub-nacionales 2002, 2006, 2010, 2014 y 2018 (Fuente: Infogob - JNE)
+
+# Posibles resultados
+
+1. Gráfico de evolución del número/porcentaje de mujeres que fueron elegidas gobernadoras regionales (tipología anterior: presidenta regional)
+2. Gráfico de evolución de número/porcentaje de mujeres en cargos de alcaldías provinciales, alcaldías municipales a nivel nacional. 
+3. Gráfico de evolución de número/porcentaje de mujeres en cargos de alcaldías municipales a nivel nacional. 
+4. Gráfico de evolución del número/porcentaje de mujeres en puestos de regidoras en las 5 elecciones a nivel nacional.  
+
+

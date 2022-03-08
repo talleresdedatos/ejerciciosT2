@@ -1,0 +1,23 @@
+---
+title: "Sumilla de autor"
+output: html_document
+---
+
+# Plantilla de la sumilla
+
+Formación profesional:
+Experiencia previa con código:
+Experiencia previa de análisis de datos:
+Región de la que proviene:
+Experiencia laboral:
+Temas de interés:
+
+# Ejemplos
+
+## Sumilla de Samuel Calderon
+
+Politólogo de la Universidad Antonio Ruiz de Montoya. Fue el encargado de dictar el taller. Actualmente trabaja en la Superintendencia Nacional de Educación Universitaria - SUNEDU como miembro del Equipo Técnico Normativo de la Dirección de Licenciamiento. Aprendió a usar R el año 2019 y desde entonces ha tratado de “convertir” a otras personas. Miembro de la organización DecideBien, colabora ocasionalmente en iniciativas de código abierto. Proviene de Lima, Perú. Su experiencia laboral ha sido siempre en el sector público (Instituto Nacional de Estadística e Informática, Ministerio de Salud, Escuela Nacional de Administración Pública, Ministerio de Vivienda, Ministerio de Educación, SUNEDU). Tiene interés en los temas de educación superior, organizaciones electorales y datos abiertos.
+
+## Sumilla de Sandra Cerna
+
+Politóloga de la Universidad Antonio Ruiz de Montoya. Anteriormente, trabajó como asistente de investigación en distintos proyectos y consultorías en temas de Educación, Ciencias Sociales y Economía. Tiene afición por los idiomas y esto se tradujo en el interés por lenguajes de programación, que exploró de manera muy superficial hace algunos años. Actualmente, trabaja en la Escuela Nacional de Administración Pública (SERVIR) y, además, se desempeña como docente de inglés, japonés y español para extranjeros. Le interesan los temas de movimientos sociales, sociología política y planificación urbana. Desde 2019 es miembro de CicloAxión, colectivo de ciclistas urbanos que promueve el uso de la bicicleta como medio de transporte.

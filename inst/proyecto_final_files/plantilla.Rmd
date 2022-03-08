@@ -1,0 +1,34 @@
+---
+title: "Plantilla de trabajo final"
+output: html_document
+---
+
+# Título del trabajo
+
+*Nombre de autor*
+
+## Introducción
+
+Descripción del tema central del trabajo (¿qué pregunta quiero responder?¿qué preguntas necesito responder previamente?)
+
+## Paquetes usados
+
+Descripción del aporte de cada paquete usado (¿qué funciones/operaciones me permite realizar?)
+
+## Conjuntos de datos usados
+
+Descripción de cada conjunto de datos (¿qué variables contiene?¿quién recoge la información contenida allí?) y su aporte al trabajo (¿qué pregunta me permite responder?).
+
+En caso se haya hecho una limpieza u ordenamiento de los datos, explicar el código utilizado.
+
+## Resultados
+
+Usar bloques de código para obtener respuestas a mis preguntas
+
+Antes de cada bloque explicar en lenguaje no técnico qué hace el bloque de código (¿qué operación estoy realizando?¿para qué quiero obtener esto?)
+
+Si mi bloque tiene como resultado una tabla o gráfico debo explicar brevemente el resultado. Si mi bloque tiene como resultado la creación de un objeto en el environment, no es necesario explicar el resultado.
+
+## Conclusiones
+
+Las respuestas obtenidas de las preguntas planteadas en la introducción. Es posible que el trabajo no alcance para responder la pregunta. En ese caso, especificar qué haría falta para responderla.
