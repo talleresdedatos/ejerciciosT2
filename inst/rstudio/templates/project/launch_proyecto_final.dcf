@@ -1,0 +1,9 @@
+Binding: crear_proyecto_final
+Title: Proyecto final del Taller de productos de datos
+OpenFiles: plan-de-trabajo.Rmd
+
+Parameter: with_git
+Widget: CheckboxInput
+Label: Crear repositorio git
+Default: Off
+Position: left
