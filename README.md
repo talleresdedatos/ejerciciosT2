@@ -16,7 +16,8 @@ Puedes instalar la versión más reciente de `ejerciciosT2` desde el
 r-universe de **talleresdedatos** con:
 
 ``` r
-install.packages("ejerciciosT2", repos = 'https://talleresdedatos.r-universe.dev')
+install.packages("ejerciciosT2", repos = 
+    c('https://talleresdedatos.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
 O desde el repositorio en Github con:
