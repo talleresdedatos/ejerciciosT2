@@ -1,6 +1,6 @@
 Package: ejerciciosT2
 Title: Ejercicios del T2 de talleresdedatos
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Samuel", "Calderon", , "samuel.calderon@uarm.pe", role = c("aut", "cre"))
 Description: Provee un conjunto de ejercicios que sirvan para complementar las actividades desarrolladas en el Taller II de Elaboración de Productos de datos: Automatización.
